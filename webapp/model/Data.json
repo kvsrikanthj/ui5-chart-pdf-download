@@ -1,0 +1,10 @@
+{
+  "data": [
+    { "type": "Real", "category": "cat_03", "amount": "50000" },
+    { "type": "Target", "category": "cat_03", "amount": "55000" },
+    { "type": "Real", "category": "cat_02", "amount": "45000" },
+    { "type": "Target", "category": "cat_02", "amount": "25000" },
+    { "type": "Real", "category": "cat_01", "amount": "40000" },
+    { "type": "Target", "category": "cat_01", "amount": "30000" }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_version": "1.8.0",
+  "sap.app": {
+    "id": "com.demo.vizframe.pdfDownload",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "Vizframe Download Chart to PDF",
+    "description": "Vizframe Download Chart to PDF",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.demo.vizframe.pdfDownload.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.m": {},
+        "sap.viz": {}
+      }
+    },
+    "models": {
+      "myModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/Data.json"
+      }
+    },
+    "resources": {
+      "js": [
+        { "uri": "libs/rgbcolor.js" },
+        { "uri": "libs/stackblur.js" },
+        { "uri": "libs/canvg.js" },
+        { "uri": "libs/jsPDF.js" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<mvc:View controllerName="com.demo.vizframe.pdfDownload.controller.App" 
+  xmlns="sap.m" 
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns:viz="sap.viz.ui5.controls" 
+  xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" 
+  xmlns:viz.data="sap.viz.ui5.data">
+  <Page title="Vizframe Save as PDF">
+    <content>
+      <viz:VizFrame id="idVizFrame" vizType='stacked_bar' width="50%">
+        <viz:dataset>
+          <viz.data:FlattenedDataset data="{myModel>/data}">
+            <viz.data:dimensions>
+              <viz.data:DimensionDefinition name="Type" value="{myModel>type}" />
+              <viz.data:DimensionDefinition name="Category" value="{myModel>category}" />
+            </viz.data:dimensions>
+            <viz.data:measures>
+              <viz.data:MeasureDefinition name="Amount" value="{myModel>amount}"/>
+            </viz.data:measures>
+          </viz.data:FlattenedDataset>
+        </viz:dataset>
+
+        <viz:feeds>
+          <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Amount"/>
+          <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Type"/>
+          <viz.feeds:FeedItem uid="color" type="Dimension" values="Category"/>
+        </viz:feeds>
+      </viz:VizFrame>
+
+      <Button text="Save Chart as PDF" press="onSavePDF" />
+    </content>
+  </Page>
+</mvc:View>
